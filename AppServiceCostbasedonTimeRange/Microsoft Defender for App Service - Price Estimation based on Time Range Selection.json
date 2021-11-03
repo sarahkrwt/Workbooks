@@ -3,7 +3,7 @@
   "parameters": {
     "workbookDisplayName": {
       "type": "string",
-      "defaultValue": "Microsoft Defender for App Service - Price Estimation1",
+      "defaultValue": "Microsoft Defender for App Service - Price Estimation",
       "metadata": {
         "description": "The friendly name for the workbook that is used in the Gallery or Saved List.  This name must be unique within a resource group."
       }
@@ -37,7 +37,7 @@
         {
           "type": 1,
           "content": {
-            "json": "## Microsoft Defender for App Service - Price Estimation\r\n> This workbook considers all App Services with/without Microsoft Defender for App Service enabled across your selected subscriptions. The results are from the last 7 days. The Estimated Price for 7 days is based on the hours the App Service was running; Estimated Monthly Price takes those 7 days as sample and calculates it for a month."
+            "json": "## Microsoft Defender for App Service - Price Estimation\r\n> This workbook considers all App Services with and without Microsoft Defender for App Services enabled across your selected subscription. The **Estimated Price** is calculated based on the selected Time Range."
           },
           "name": "text - 2"
         },
