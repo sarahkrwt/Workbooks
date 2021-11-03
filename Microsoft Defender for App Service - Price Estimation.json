@@ -46,7 +46,7 @@
           "content": {
             "version": "KqlParameterItem/1.0",
             "crossComponentResources": [
-              "{Subscriptions}"
+              "value::selected"
             ],
             "parameters": [
               {
@@ -55,9 +55,9 @@
                 "name": "Subscriptions",
                 "label": "Subscription",
                 "type": 6,
-                "description": "All subscriptions with Key Vaults",
+                "description": "All subscriptions with App Services",
                 "isRequired": true,
-                "query": "where type =~ 'Microsoft.KeyVault/vaults'\r\n| summarize Count = count() by subscriptionId\r\n| order by Count desc\r\n| extend Rank = row_number()\r\n| project value = subscriptionId, label = subscriptionId, selected = Rank == 1",
+                "query": "where type =~ 'Microsoft.Web/sites'\r\n| summarize Count = count() by subscriptionId\r\n| order by Count desc\r\n| extend Rank = row_number()\r\n| project value = subscriptionId, label = subscriptionId, selected = Rank == 1",
                 "crossComponentResources": [
                   "value::selected"
                 ],
